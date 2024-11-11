@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>NSIT</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+<style>
+
+/* The grid: Three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 50px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
+}
+
+.containerTab {
+  padding: 20px;
+  color: white;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Closable button inside the image */
+.closebtn {
+  float: right;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+</style>
+
+   </head>
+   <!-- body -->
+   <body class="main-layout inner_page">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#"/></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <div class="header">
+         <div class="container">
+            <div class="row d_flex">
+               <div class=" col-md-2 col-sm-3 col logo_section">
+                  <div class="full">
+                     <div class="center-desk">
+                        <div class="logo">
+                           <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-8 col-sm-12">
+                  <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon"></span>
+                     </button>
+                     <div class="collapse navbar-collapse" id="navbarsExample04">
+                        <ul class="navbar-nav mr-auto">
+                           <li class="nav-item">
+                              <a class="nav-link" href="index.html">Home</a>
+                           </li>
+                           <li class="nav-item active">
+                              <a class="nav-link" href="about.html">About</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="hosting.html">Hosting</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="domain.html">Domain</a>
+                           </li>
+                          
+                           <li class="nav-item">
+                              <a class="nav-link" href="contact.html">Contact Us</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="blog.html">Blog</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="login.html">login</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </nav>
+               </div>
+               <div class="col-md-2  d_none">
+                  <ul class="email text_align_right">
+                     
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+<div style="text-align:center">
+  <h2>Expanding Grid</h2>
+  <p>Click on the boxes below:</p>
+</div>
+
+<script>
+
+// Hide all elements with class="containerTab", except for the one that matches the clickable grid column
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+
+
+</script>
+
+
+<!-- The grid: three columns -->
+<div class="row">
+   <div class="column" onclick="openTab('b1');" style="background:green;">Box 1</div>
+   <div class="column" onclick="openTab('b2');" style="background:blue;">Box 2</div>
+   <div class="column" onclick="openTab('b3');" style="background:red;">Box 3</div>
+ </div>
+ 
+ <!-- The expanding grid (hidden by default) -->
+ <div id="b1" class="containerTab" style="display:none;background:green">
+   <!-- If you want the ability to close the container, add a close button -->
+   <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+   <h2>Box 1</h2>
+   <p>Lorem ipsum..</p>
+ </div>
+ 
+ <div id="b2" class="containerTab" style="display:none;background:blue">
+   <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+   <h2>Box 2</h2>
+   <p>Lorem ipsum..</p>
+ </div>
+ 
+ <div id="b3" class="containerTab" style="display:none;background:red">
+   <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+   <h2>Box 3</h2>
+   <p>Lorem ipsum..</p>
+ </div>
+
+
+
+
+
+
+
+
+
+<!-- Full-width columns: (hidden by default) -->
+<div id="b1" class="containerTab" style="display:none;background:green">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Box 1</h2>
+  <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+</div>
+
+<div id="b2" class="containerTab" style="display:none;background:blue">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Box 2</h2>
+  <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+</div>
+
+<div id="b3" class="containerTab" style="display:none;background:red">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Box 3</h2>
+  <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+</div>
+<footer>
+   <div class="footer">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+               <div class="infoma text_align_left">
+                  <h3>Choose.</h3>
+                  <ul class="commodo">
+                     <li>Commodo</li>
+                     <li>consequat. Duis a</li>
+                     <li>ute irure dolor</li>
+                     <li>in reprehenderit </li>
+                     <li>in voluptate </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+               <div class="infoma">
+                  <h3>Get Support.</h3>
+                  <ul class="conta">
+                     <li><i class="fa fa-map-marker" aria-hidden="true"></i>Address : Mathura 
+                     </li>
+                     <li><i class="fa fa-phone" aria-hidden="true"></i>Call : +91 8171313294</li>
+                     <li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="Javascript:void(0)"> Email : nsitmathura@gmail.com</a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+               <div class="infoma">
+                  <h3>Company.</h3>
+                  <ul class="menu_footer">
+                     <li><a href="index.html">Home</a></li>
+                     <li><a href="about.html">About </a></li>
+                     <li><a href="domain.html">Domain</a></li>
+                     <li><a href="hosting.html">Hosting</a></li>
+                     <li><a href="contact.html">Contact</a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6">
+               <div class="infoma text_align_left">
+                  <h3>Services.</h3>
+                  <ul class="commodo">
+                     <li>Java</li>
+                     <li>Ms excel</li>
+                     <li>C Language</li>
+                     <li>python </li>
+                     <li>PHP </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="copyright">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <p>© 2020 All Rights Reserved. <a href="https://html.design/"> Free html Templates</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</footer>
+<!-- end footer -->
+<!-- Javascript files-->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<!-- sidebar -->
+<script src="js/custom.js"></script>
+</body>
+</html>
